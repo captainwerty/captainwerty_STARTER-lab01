@@ -50,15 +50,12 @@ void IntList::push_front(int value) {
 // append value at end of list
 void IntList::push_back(int value) {
     Node *new_node = new Node(value);
-    if (tail != nullptr) {
+    if (tail){
         tail->next = new_node;
         tail = new_node;
     } else {
-        head = new_node;
         tail = new_node;
     }
-    // IMPLEMENT
- 
 }
 
 // return count of values
