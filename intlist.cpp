@@ -1,6 +1,6 @@
 // intlist.cpp
 // Implements class IntList
-// YOUR NAME(S), AND DATE
+// Harsha Malaviya 1/11/26
 
 #include "intlist.h"
 
@@ -9,6 +9,9 @@ using std::cout;
 
 // copy constructor
 IntList::IntList(const IntList& source) {
+    
+    
+    
     //IMPLEMENT THIS
 }
 
@@ -46,6 +49,14 @@ void IntList::push_front(int value) {
 
 // append value at end of list
 void IntList::push_back(int value) {
+    Node *new_node = new Node(value);
+    if (tail != nullptr) {
+        tail->next = new_node;
+        tail = new_node;
+    } else {
+        head = new_node;
+        tail = new_node;
+    }
     // IMPLEMENT
  
 }
@@ -66,6 +77,8 @@ IntList& IntList::operator=(const IntList& source){
 
 // constructor sets up empty list
 IntList::IntList(){ 
+    head = nullptr;
+    tail = nullptr;
     //IMPLEMENT THIS 
 }
 
