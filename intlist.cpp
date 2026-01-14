@@ -139,11 +139,7 @@ IntList& IntList::operator=(const IntList& source){
 }
 
 // constructor sets up empty list
-IntList::IntList(){ 
-    head = nullptr;
-    tail = nullptr;
-}
-
+IntList::IntList():head(nullptr),tail(nullptr){ }
 
 // DO NOT CHANGE ANYTHING BELOW (READ IT THOUGH)
 
