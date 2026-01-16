@@ -84,8 +84,8 @@ void IntList::push_front(int value) {
         new_node->next = head;
         head = new_node;
     } else {
-        new_node->next = head->next;
-        head->next = new_node;
+        new_node->next = head;
+        head = new_node;
     }
 }
 
